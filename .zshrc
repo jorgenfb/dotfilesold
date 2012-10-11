@@ -54,7 +54,7 @@ alias tml="tmux list-sessions"
 alias tmn="tmux new-session -s"
 alias tma="tmux attach-session -t"
 
-alias e="subl -n ."
+alias e="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl -n ."
 
 alias dh='df -h'
 alias c='cd ~; clear'
