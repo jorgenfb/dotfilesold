@@ -1,0 +1,8 @@
+# Enable key-repeat for sublime in vintage mode on OSX Lion
+defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
+
+# Change key repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Change key repeat delay
+defaults write NSGlobalDomain InitialKeyRepeat -int 4
