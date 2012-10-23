@@ -54,6 +54,9 @@ alias tml="tmux list-sessions"
 alias tmn="tmux new-session -s"
 alias tma="tmux attach-session -t"
 
+alias startftp="sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
+alias stopftp="sudo -s launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
+
 alias e="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl -n ."
 
 alias dh='df -h'
@@ -156,10 +159,22 @@ agB () {
    dpkg -L $@ | grep bin
 }
 
-PATH=$PATH:/Applications/android-sdk-mac_86/tools
-PATH=$PATH:/Applications/android-sdk-mac_86/platform-tools
-PATH=$PATH:~/bin
-PATH=$PATH:/opt/local/bin
-PATH=$PATH:/usr/local/mysql/bin/
+#PATH=$PATH:/opt/local/bin
+#PATH=$PATH:/usr/local/mysql/bin/
+
+
+# MacPorts Installer addition on 2012-10-11_at_14:55:57: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# Adding path to play framework
+export PATH=/Applications/play-2.0.4/:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Adding my personal bin folder
+export PATH=/Users/jorgen/bin:$PATH
 
 compdef -d git
+
