@@ -1,8 +1,15 @@
-# Enable key-repeat for sublime in vintage mode on OSX Lion
+# Enable key-repeat on OSX Lion+.
 defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
 
 # Change key repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Change key repeat delay
-defaults write NSGlobalDomain InitialKeyRepeat -int 4
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Decrease dock size and autohide it. Then restart dock to apply changes
+defaults write com.apple.dock tilesize -int 16
+defaults write com.apple.dock autohide -int 1
+killall -KILL Dock
+
+
